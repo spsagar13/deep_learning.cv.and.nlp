@@ -6,14 +6,13 @@ The input is an image, and the output is a sentence describing the content of th
 Models description
 ------------------
 Model 1 : 
-The most general one. Uses a pre-trained VGG-16 CNN and it is trained on MS COCO dataset. 
+The most general one. Uses a pre-trained VGG-16 CNN and it is trained and tested on general (MS COCO) dataset. 
 Model 2 :  
-This version uses a pre-trained ResNet50 CNN and it is trained on whole MS COCO dataset then test on MS COCO dataset.
+This version uses a pre-trained ResNet50 CNN and it is trained and tested on (general) MS COCO dataset.
 Model 3 : 
-This model fine-tunes the pre-trained VGG-16 CNN, but it is trained and tested in a subset of the COCO dataset that has only images containing people.
+This model fine-tunes the pre-trained VGG-16 CNN, but it is trained and tested in a subset of the general (MS COCO) dataset (that has only images containing people.)
 Model 4 : 
-Fine-tunes the pre-trained ResNet50 CNN with subset of only images containing people and then train & test on MS COCO dataset with images containing people.
-
+Fine-tunes the pre-trained ResNet50 CNN, but it is trained and tested in a subset of the general (MS COCO) dataset (that has only images containing people.)
 Evaluation matrices
 -------------------
 BLEU 
