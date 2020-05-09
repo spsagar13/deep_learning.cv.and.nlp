@@ -1,7 +1,7 @@
-### Introduction
-This image captioning is roughly based on the paper "Show, Attend and Tell: Neural Image Caption Generation with Visual Attention" by Xu et al. (ICML2015).
-The input is an image, and the output is a sentence describing the content of the image. It uses a convolutional neural network to extract visual features from the image, and uses a LSTM recurrent neural network to decode these features into a sentence.
-A soft attention mechanism is incorporated to improve the quality of the caption. This project is implemented using the Tensorflow library, and allows end-to-end training of both CNN and RNN parts.
+Introduction
+------------
+This work implements two models in VGG16 and two in Res-net50 along with the RNN-LSTM. Image captioning is roughly based on the paper "Show, Attend and Tell: Neural Image Caption Generation with Visual Attention" by Xu et al. (ICML2015).
+The input is an image, and the output is a sentence describing the content of the image. It uses a convolutional neural network to extract visual features from the image, and uses a LSTM recurrent neural network to decode these features into a sentence.A soft attention mechanism is incorporated to improve the quality of the caption. This project is implemented using the Tensorflow library, and allows end-to-end training of both CNN and RNN parts. The four models are then evaluated using matrices such as BLEU (all four), METEOR, ROUGE, SPICE, and CIDEr.
 
 Models description
 ------------------
@@ -15,7 +15,7 @@ Model 4 :
 Fine-tunes the pre-trained ResNet50 CNN with subset of only images containing people and then train & test on MS COCO dataset with images containing people.
 
 Evaluation matrices
-------------------
+-------------------
 BLEU 
 (Bilingual Evaluation Understudy) metrics
 ROUGE 
@@ -27,7 +27,7 @@ CIDEr
 SPICE 
 (Semantic Propositional Image Caption Evalua
 
-### Prerequisites
+### Prerequisites ###
 - Tensorflow (https://www.tensorflow.org/install/)
 - NumPy (https://scipy.org/install.html))
 - OpenCV (https://pypi.python.org/pypi/opencv-python)
@@ -36,8 +36,7 @@ SPICE
 - Matplotlib (https://scipy.org/install.html)
 - tqdm (https://pypi.python.org/pypi/tqdm))
 
-### Code folder structure
-
+### Code folder structure ###
 image_captioning-eval
 ├── README.txt
 ├── base_model.py
@@ -122,7 +121,7 @@ You can use the trained model to generate captions for any JPEG images! Put such
 The generated captions will be saved in the folder `test/results`.
 
 
-### References
+### References ###
 - Show, Attend and Tell: Neural Image Caption Generation with Visual Attention](https://arxiv.org/abs/1502.03044). Kelvin Xu, Jimmy Ba, Ryan Kiros, Kyunghyun Cho, Aaron Courville, Ruslan Salakhutdinov, Richard Zemel, Yoshua Bengio. ICML 2015.
 - The original implementation in Theano(https://github.com/kelvinxu/arctic-captions)
 - An earlier implementation in Tensorflow(https://github.com/jazzsaxmafia/show_attend_and_tell.tensorflow)
