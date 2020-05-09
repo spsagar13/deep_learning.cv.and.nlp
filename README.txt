@@ -3,6 +3,30 @@ This image captioning is roughly based on the paper "Show, Attend and Tell: Neur
 The input is an image, and the output is a sentence describing the content of the image. It uses a convolutional neural network to extract visual features from the image, and uses a LSTM recurrent neural network to decode these features into a sentence.
 A soft attention mechanism is incorporated to improve the quality of the caption. This project is implemented using the Tensorflow library, and allows end-to-end training of both CNN and RNN parts.
 
+Models description
+------------------
+Model 1 : 
+The most general one. Uses a pre-trained VGG-16 CNN and it is trained on MS COCO dataset. 
+Model 2 :  
+This version uses a pre-trained ResNet50 CNN and it is trained on whole MS COCO dataset then test on MS COCO dataset.
+Model 3 : 
+This model fine-tunes the pre-trained VGG-16 CNN, but it is trained and tested in a subset of the COCO dataset that has only images containing people.
+Model 4 : 
+Fine-tunes the pre-trained ResNet50 CNN with subset of only images containing people and then train & test on MS COCO dataset with images containing people.
+
+Evaluation matrices
+------------------
+BLEU 
+(Bilingual Evaluation Understudy) metrics
+ROUGE 
+(Recall-Oriented Understudy for Gisting Evaluation)
+METEOR 
+(Metric for Evaluation for Translation with Explicit Ordering) 
+CIDEr 
+(Consensus-based Image Description Evaluation)
+SPICE 
+(Semantic Propositional Image Caption Evalua
+
 ### Prerequisites
 - Tensorflow (https://www.tensorflow.org/install/)
 - NumPy (https://scipy.org/install.html))
