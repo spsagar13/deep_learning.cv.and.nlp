@@ -1,6 +1,6 @@
 Introduction
 ------------
-This work implements two models in VGG16 and two in Res-net50 along with the RNN-LSTM. Image captioning is roughly based on the paper "Show, Attend and Tell: Neural Image Caption Generation with Visual Attention" by Xu et al. (ICML2015).
+This work implements two models in VGG-16 and two in Resnet-50 along with the RNN-LSTM. Image captioning is roughly based on the paper "Show, Attend and Tell: Neural Image Caption Generation with Visual Attention" by Xu et al. (ICML2015).
 The input is an image, and the output is a sentence describing the content of the image. It uses a convolutional neural network to extract visual features from the image, and uses a LSTM recurrent neural network to decode these features into a sentence.A soft attention mechanism is incorporated to improve the quality of the caption. This project is implemented using the Tensorflow library, and allows end-to-end training of both CNN and RNN parts. The four models are then evaluated using matrices such as BLEU (all four), METEOR, ROUGE, SPICE, and CIDEr.
 
 Models description
